@@ -1,0 +1,20 @@
+h1 {
+	text-align: center;
+	/* width: 50%; */
+	font-weight: 400; /* or could choose normal */
+	text-decoration: #f7821f underline dotted;
+	letter-spacing: 15px;
+	font-size: 100px;
+	font-family: Arial;
+}
+
+p {
+	text-align: right;
+	font-weight: 700;
+	line-height: 2;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; /* This is a font stack, which means the browser has a backup font to use if it doesn't have the first font available */
+}
+
+a {
+	text-decoration: none;
+}

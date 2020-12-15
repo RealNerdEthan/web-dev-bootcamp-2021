@@ -1,3 +1,43 @@
+/* NAMED COLORS
 h2 {
 	color: blueviolet;
+	background-color: papayawhip;
+}
+
+button {
+	color: magenta;
+	background-color: cyan;
+}
+
+p {
+	color: olive;
+	background: orange; (Background can be more than a color, could be a gradient or an image)
+}
+*/
+
+/* RGB COLORS 
+h2 {
+	background-color: rgb(89, 151, 0);
+}
+
+button {
+	background-color: rgb(255, 168, 168);
+}
+
+p {
+	color: rgb(216, 35, 215);
+}
+*/
+
+/* HEX COLORS */
+h2 {
+	background-color: #5fcffc;
+}
+
+button {
+	background-color: #c5e; /* This 3 digit hex color represents #cc55ee */
+}
+
+p {
+	color: #567cce;
 }
