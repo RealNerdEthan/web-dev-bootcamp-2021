@@ -1,0 +1,6 @@
+/* this stylesheet shows that they are cascading and the order in which they are placed matters */
+
+h1,
+h2 {
+	color: royalblue;
+}

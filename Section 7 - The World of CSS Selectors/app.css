@@ -1,0 +1,115 @@
+/* * {
+	background-color: cyan;
+}
+*/
+
+body {
+	background-color: #f1faee;
+}
+
+button {
+	font-size: 30px;
+	background-color: #a8dadc;
+}
+
+/* Multiple elements selected */
+h1,
+h2 {
+	color: #1d3557;
+}
+
+/* This is an ID selector */
+#signup {
+	background-color: #1d3557;
+	color: #f1faee;
+}
+
+span {
+	color: #457b9d;
+}
+
+/* Class selector */
+.tag {
+	background-color: #e63946;
+	color: #f1faee;
+	font-size: 16px;
+}
+
+/* Decendant Selector */
+.post a {
+	color: #457b9d;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+footer a {
+	color: #e63946;
+}
+
+/* Adjacent Selector (combinator) */
+input + button {
+	background-color: pink;
+}
+
+h2 + button {
+	font-size: 20px;
+}
+
+/* Direct Child Sleector (combinator) */
+footer > a {
+	color: #2a9d8f;
+}
+
+/* Attribute Selector */
+input[type="password"] {
+	color: greenyellow;
+}
+
+/* Targets <a> elements with an href containing "google" */
+a[href*="google"] {
+	color: magenta;
+}
+
+/* Targets <a> elements with an href ending in ".org" */
+a[href$=".org"] {
+	font-style: italic;
+}
+
+/* Pseudo Classes */
+/* Selects any <a> element when "hovered" over */
+.post a:hover {
+	text-decoration: underline;
+	color: orange;
+}
+
+.post button:hover {
+	background-color: #e63946;
+	color: #f1faee;
+}
+
+.post button:active {
+	background-color: #2a9d8f;
+}
+
+/* nth of type */
+.post:nth-of-type(2n) {
+	background-color: #dfe8dc;
+}
+
+/* Pseudo Element */
+h2::first-letter {
+	font-size: 50px;
+}
+
+p::first-line {
+	color: purple;
+}
+
+p::selection {
+	background-color: #e9c46a;
+}
+
+/* Specificity - the more specific a selector is then it will win (!Important > Inline Styles > ID > Class > Element) */
+button:hover {
+	background-color: olive;
+}
