@@ -1,0 +1,32 @@
+/* Display properties allow us to change an element to Inline | Block | or Inline-Block */
+
+h1 {
+	background-color: palegoldenrod;
+	border: 1px solid black;
+	display: inline;
+}
+
+span {
+	background-color: paleturquoise;
+	border: 1px solid black;
+	display: block;
+}
+
+#inline_span {
+	background-color: palevioletred;
+	border: 1px solid black;
+	display: inline;
+	width: 500px; /* Width and height are ignored becuase the element in inline */
+	padding: 50px; /* Padding is only partically respected by the other content on the pafe when used in an inline element */
+	margin: 50px; /* The margin is only respected horiziontally on the line the span is on (inline) */
+}
+
+#h1_block {
+	display: block;
+	background-color: palegreen;
+	border: 1px solid black;
+	width: 500px;
+	padding: 50px;
+	margin: 50px;
+	/* Block elements properties such as width/padding/margin are respecvted */
+}

@@ -1,0 +1,84 @@
+/* Width and height properties */
+div {
+	width: 200px;
+	height: 200px;
+	background-color: #e5989b;
+}
+
+h1 {
+	background-color: rgb(80, 196, 95);
+	width: 100px;
+}
+
+/* Border properties around an element */
+#one {
+	background-color: #e5989b;
+	border-width: 5px;
+	border-color: black;
+	border-style: solid;
+	/*box-sizing: border-box;  Border subtracts from content box area instead of growing elemnt size */
+}
+
+#two {
+	background-color: #b5838d;
+	border-color: #ffcdb2;
+	border-width: 3px;
+	border-style: dashed;
+	border-left-width: 8px;
+	border-radius: 5%;
+}
+
+#three {
+	background-color: #6d6875;
+	/* Width | Style | Color */
+	border: 4px dotted black;
+	border-left-style: solid;
+	border-radius: 50%;
+}
+
+/* Padding in an element is the space between the content box and the border */
+/* These are seperated from the others above just to show the padding properties speratly, no other reason and should normall be combined */
+
+/* All */
+/* Top/Bottom Left/Right */
+/* Top | Left/Right | Bottom */
+/* Top | Right | Bottom | Left */
+
+h1 {
+	padding-left: 100px;
+	padding-top: 50px;
+}
+
+#two {
+	padding-right: 50px;
+}
+
+button {
+	padding: 10px 20px 30px 40px;
+}
+
+/* Margin properties of an element is the spacing on the outside of the border */
+/* These are seperated from the others above just to show the padding properties speratly, no other reason and should normall be combined */
+
+/* All */
+/* Top/Bottom Left/Right */
+/* Top | Left/Right | Bottom */
+/* Top | Right | Bottom | Left */
+
+h1 {
+	margin: 0;
+	width: 200px;
+}
+
+body {
+	margin: 0;
+}
+
+#one {
+	margin-left: 50px;
+	margin-bottom: 100px;
+}
+
+#two {
+	margin: 200px;
+}
