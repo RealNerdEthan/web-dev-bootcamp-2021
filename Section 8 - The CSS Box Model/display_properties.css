@@ -30,3 +30,16 @@ span {
 	margin: 50px;
 	/* Block elements properties such as width/padding/margin are respecvted */
 }
+
+div {
+	height: 200px;
+	width: 200px;
+	background-color: cornflowerblue;
+	border: 1px solid black;
+	display: inline-block;
+	margin: 50px;
+}
+
+#display_none_button {
+	display: none;
+}

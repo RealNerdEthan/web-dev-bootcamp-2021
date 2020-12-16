@@ -1,0 +1,63 @@
+section {
+	background-color: #6d6875;
+	width: 800px;
+	height: 800px;
+}
+
+/* This is a % of the height/width of the parent element "section" */
+div {
+	background-color: #e5989b;
+	width: 70%;
+	height: 20%;
+}
+
+/* This is not referencing the parent element, but instead the font-size property */
+h1 {
+	font-size: 40px;
+	border: 1px solid black;
+	line-height: 200%;
+}
+
+/* em's are eletaive units */
+article {
+	font-size: 20px;
+}
+
+/* The em is refencing the parent element "article"'s font-size property */
+h2 {
+	font-size: 2em;
+}
+
+p {
+	font-size: 1em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+/* 1 em is equal to the font-size of the elemernt itself */
+/* These are seperated from the others above just to show the margin properties speratly, no other reason and should normall be combined */
+h2 {
+	margin-left: 1em;
+}
+
+/* Setting this button to use em allows the button to retain its shape even if the article element grows or shrinks in size */
+button {
+	font-size: 1em;
+	padding: 0 1em;
+	border-radius: 0.5em;
+	background-color: crimson;
+	color: white;
+}
+
+/* rem (root element font-size) */
+/* This is an example of em's stacking on eachother */
+#em_stacking ul {
+	font-size: 1.5em;
+}
+
+/* rem's use the root elemnt to base size off of, not the parent elemnt like em's */
+#rem_stacking {
+	font-size: 1.5rem;
+}
