@@ -1,0 +1,42 @@
+/* https://developer.mozilla.org/en-US/docs/web/css/position */
+
+div {
+	width: 100px;
+	height: 100px;
+	background-color: #3d405b;
+	border: 2px solid black;
+	margin-left: 10px;
+	display: inline-block;
+}
+
+#middle {
+	background-color: #81b29a;
+}
+
+#static #middle {
+	position: static;
+}
+
+#relative #middle {
+	position: relative;
+	top: 50px;
+	left: 50px;
+}
+
+/* This is the ancestor for #absolute #middle
+#absolute {
+	position: relative;
+}
+*/
+
+#absolute #middle {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+#fixed #middle {
+	position: fixed;
+	top: 0;
+	left: 400;
+}
