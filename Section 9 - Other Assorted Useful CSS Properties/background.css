@@ -1,0 +1,17 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/background */
+
+section {
+	width: 80%;
+	height: 800px;
+	background-image: url(https://images.unsplash.com/photo-1601302249990-1732be74acb1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80);
+	background-color: rgb(207, 188, 188);
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: top;
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 100px;
+	color: white;
+}
