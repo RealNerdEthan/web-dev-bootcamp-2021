@@ -57,3 +57,52 @@ function add2(x, y) {
     return x + y;
 }
 
+//Retun last element in array Exercise
+function lastElement(array){
+    if(array.length >= 1) {
+        return array[array.length - 1];
+    } else {
+        return null;
+    }
+ }
+ 
+ let array = ["Ethan", "Morgan", "Ashley", "Cody"];
+ console.log(lastElement(array));
+
+ //Capitalize first letter in string Exercise
+ function capitalize(enteredValue){
+    let newString = enteredValue[0].toUpperCase() + enteredValue.slice(1);
+    return newString;
+}
+
+console.log(capitalize("cat"))
+
+//Sum Array Exercise 42
+let sum = 0;
+function sumArray(input){
+    for (let i = 0; i < input.length; i++){
+        sum += input[i];
+    }
+    return sum;
+}
+
+//Day of week Exercise 43
+//Function that accepts one paramaeter and returns day of week, else returns null
+function returnDay(input) {
+    if (input > 0 && input < 8){
+        return daysOfWeek[input - 1];
+    } else {
+        return "null";
+    }
+}
+
+//Array of days
+const daysOfWeek= [
+    "Monday", 
+    "Tuesday", 
+    "Wednesday", 
+    "Thursday", 
+    "Friday", 
+    "Saturday", 
+    "Sunday"
+];
