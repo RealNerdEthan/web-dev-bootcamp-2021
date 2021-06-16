@@ -16,3 +16,6 @@ const links = document.querySelectorAll('p a');
 for (let link of links) {
     console.log(link.href)
 }
+
+//Create variable by selecting element and defining a specific attribute to select
+//const checkbox = document.querySelector ('input[type="checkbox"]');
