@@ -5,6 +5,22 @@ for(let img of allImages) {
 }
 
 
+
+//innerText shows text but is sensitive to what is being displayed
+//document.querySelector('h1').innerText
+//textContent shows all text, even if hidden
+//document.querySelector('h1').innerHTML = <i>NEW_TEXT_IS_NOT_ITALICIZED</i>
+//innerHTML shows all text and markup
+//document.querySelector('h1').innerHTML = <i>NEW_TEXT_IS_ITALICIZED</i>
+
+//You can also do a += to add to current element
+//Example: document.querySelector('h1').innerHTML += '<sup>THIS_ADDS_SUPERSCRIPT</sup>'
+
+//MANIPULATING ATTRIBUTES PRACTICE
+//document.querySelector('img').src = 'https://www.flaticon.com/svg/static/icons/svg/3523/3523063.svg';
+//document.querySelector('img').alt = 'chicken';
+
+
 const allLinks = document.querySelectorAll('a');
 
 // for (let link of allLinks) {
@@ -17,13 +33,3 @@ for (let link of allLinks) {
     link.style.textDecorationColor = 'magenta';
     link.style.textDecorationStyle = 'wavy'
 }
-
-//innerText shows text but is sensitive to what is being displayed
-//document.querySelector('h1').innerText
-//textContent shows all text, even if hidden
-//document.querySelector('h1').innerHTML = <i>NEW_TEXT_IS_NOT_ITALICIZED</i>
-//innerHTML shows all text and markup
-//document.querySelector('h1').innerHTML = <i>NEW_TEXT_IS_ITALICIZED</i>
-
-//You can also do a += to add to current element
-//Example: document.querySelector('h1').innerHTML += '<sup>THIS_ADDS_SUPERSCRIPT</sup>'
