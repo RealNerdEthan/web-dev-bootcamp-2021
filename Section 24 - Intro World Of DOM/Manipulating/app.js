@@ -33,3 +33,10 @@ for (let link of allLinks) {
     link.style.textDecorationColor = 'magenta';
     link.style.textDecorationStyle = 'wavy'
 }
+
+//Using a for loop to create 100 buttons and append as child to a div called container
+for (let buttons = 0; buttons <100; buttons++) {
+    const newButton = document.createElement('button');
+    newButton.innerText = 'Hello';
+    container.appendChild(newButton);
+}
