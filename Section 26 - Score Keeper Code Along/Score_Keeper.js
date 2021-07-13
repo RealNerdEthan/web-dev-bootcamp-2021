@@ -11,16 +11,12 @@ let roundLimit = 6;
 
 roundLimitSelector.addEventListener('change', function(){
     roundLimit = parseInt(this.value);
-    //reset();
 })
 
 playerOneButton.addEventListener('click', function(){
-    //add 1 to first number
-    //check if first nunber = playing to number, then change first number color to green and second number color to red and disable both buttons
-    if (playerOneScore != roundLimit){
-        playerOneScore += 1;
-        playerOneDisplay.textContent = playerOneScore;
-    } else if (playerOneScore === roundLimit){
+    playerOneScore += 1;
+    playerOneDisplay.textContent = playerOneScore;
+    if (playerOneScore === roundLimit){
         playerOneDisplay.style.color = 'green';
         playerTwoDisplay.style.color = 'red';
         playerOneButton.disabled = true;
@@ -29,12 +25,9 @@ playerOneButton.addEventListener('click', function(){
 })
 
 playerTwoButton.addEventListener('click', function(){
-    //add 1 to second number
-    //check if second number = playing to number, then change first number to red and second number to green and disable both buttons
-    if (playerTwoScore != roundLimit){
-        playerTwoScore += 1;
-        playerTwoDisplay.textContent = playerTwoScore;
-    } else if (playerTwoScore === roundLimit){
+    playerTwoScore += 1;
+    playerTwoDisplay.textContent = playerTwoScore;
+    if (playerTwoScore === roundLimit){
         playerOneDisplay.style.color = 'red';
         playerTwoDisplay.style.color = 'green';
         playerOneButton.disabled = true;
