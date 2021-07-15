@@ -1,3 +1,6 @@
+//Note that this code has been refactored. Before the refactor, our code was very similar
+//This also starts the setup if you wanted to add more players to the tracker
+
 const p1 = {
     score: 0,
     button: document.querySelector('#p1Button'),
