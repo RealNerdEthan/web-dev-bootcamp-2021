@@ -11,19 +11,6 @@ const fakeRequestCallback = function(url, success, failure){
     }, delay)
 }
 
-const fakeRequestPromise = function(url) {
-    return new Promise(function(resolve, reject){
-        const delay = Math.floor(Math.random() * (4500)) + 500;
-        setTimeout(function(){
-            if (delay > 4000){
-                reject('Connection timed out')
-            } else {
-                resolve(`Here is your fake data from ${url}`)
-            }
-        }, delay)
-    })
-}
-
 //-------------------------------------------------------------
 //Here is the function that calls the fake data using the functions from above
 
