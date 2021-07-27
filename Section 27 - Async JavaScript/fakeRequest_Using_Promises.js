@@ -12,11 +12,19 @@ const fakeRequestPromise = function(url) {
     })
 }
 
-//Examples below
+//Examples below of promises and how to nest them (could continue with a page 3/4/5 etc)
+//Note that this isn't the best way to use promises, but it is technically possible
 
-const request = fakeRequestPromise('yelp.com/api/coffee');
+const request = fakeRequestPromise('yelp.com/api/coffee/page1');
+
 request.then(function(){
-    console.log('Data successfully recieved')
+    console.log('Promise #1 resolved...Data successfully recieved from source #1!')
+    fakeRequestPromise('yelp.com/api/coffee/page2')
+        .then(function(){
+            console.log('Promise #2 resolved...Data successfully recieved from source #2')
+        }).catch(function(){
+            console.log('Promise #2 rejected...On no, error encountered with source #2!')
+        })
 }).catch(function(){
-    console.log('On no, error encountered!')
+    console.log('Promise rejected...On no, error encountered from source #1!')
 })
