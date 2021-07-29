@@ -25,7 +25,7 @@ rainbow().then(function(){
 })
 
 
-//Here's using another async function but witing until after rainbow() has run
+//Here's using another async function but waiting until after rainbow() has run
 async function printRainbow(){
     await rainbow();
     console.log('Rainbow has finished running.')
