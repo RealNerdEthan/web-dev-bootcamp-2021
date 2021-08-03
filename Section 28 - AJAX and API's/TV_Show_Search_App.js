@@ -18,7 +18,6 @@ const makeImages = function(shows){
             const tvShowImage = document.createElement('IMG');
             tvShowImage.src = result.show.image.medium;
             displayArea.append(tvShowImage);
-            // document.body.append(tvShowImage);
         }
     }
 }
