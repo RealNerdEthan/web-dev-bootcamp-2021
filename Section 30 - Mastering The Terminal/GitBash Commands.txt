@@ -1,0 +1,17 @@
+GitBash Commands
+https://git-scm.com/docs
+
+(Help)
+YOUR-COMMAND-HERE --help
+
+(Hidden Files)
+DIRECTORY-NAME -a
+
+(Make a File)
+touch FILENAME.FILE-EXTENTSION
+
+(Remove Directory)
+rm -rf DIRECTORY-NAME
+
+(Show Actions aka Verbose)
+YOUR-COMMAND-HERE -v
