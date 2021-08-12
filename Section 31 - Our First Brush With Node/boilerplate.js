@@ -5,7 +5,7 @@
 const fs = require('fs');
 // console.log(fs);
 
-//This remove the executable file path and the file path to the new folder/file
+//This removes the executable file path and the file path to the new folder/file
 const folderName = process.argv[2] || 'Project'
 
 //ASync version of making a directory
