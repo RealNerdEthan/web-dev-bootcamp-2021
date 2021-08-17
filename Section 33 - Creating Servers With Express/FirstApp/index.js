@@ -24,7 +24,7 @@ app.get('/r/:subreddit/:postId', function(request, response){
 
 //This is the home request route
 app.get('/', function(request, response){
-    response.send('This is the homepage!')
+    response.send('Welcome to the homepage!')
 })
 
 //This route looks for /cats requests and responds with 'Meow!'
@@ -44,10 +44,20 @@ app.get('/dogs', function(request, response){
     response.send('Woof!')
 })
 
+//Query route
+app.get('/search', function(request, response){
+    const {q} = request.query;
+    if(!q){
+        response.send('Nothing found if nothing searched!')
+    }
+    response.send(`<h1>Search results for: ${q}</h1>`)
+})
+
 //This route will match with all requests and respond with a generic response. MUST BE AT THE END!
 app.get('*', function(request, response){
     response.send("I don't know that path, sorry!")
 })
+
 
 //This starts the server which uses port 3000
 app.listen(3000, function(){
