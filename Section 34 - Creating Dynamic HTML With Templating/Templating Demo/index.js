@@ -10,6 +10,10 @@ app.get('/', function(request, response){
     response.render('home')
 })
 
+app.get('/random', function(request, response){
+    response.render('random');
+})
+
 app.listen(3000, function(){
     console.log('Listening on port 3000!')
 })
