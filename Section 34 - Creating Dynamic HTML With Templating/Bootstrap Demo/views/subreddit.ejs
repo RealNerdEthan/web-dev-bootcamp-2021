@@ -1,0 +1,32 @@
+<%- include('partials/head'); %>
+
+    <%- include('partials/navbar'); %>
+        <div class="container">
+
+            <!-- Add the JavaScript logic and render it -->
+            <!--<h1>Browsing The <%=//subreddit%> Subreddit </h1>-->
+
+            <h1>Browsing The <%=name%> Subreddit </h1>
+            <h2>
+                <%=description%>
+            </h2>
+            <p>
+                <%=subscribers%> Total Subscribers
+            </p>
+
+            <hr>
+
+            <%for(let post of posts){%>
+                <article>
+                    <p>
+                        <%=post.title%> - <b>
+                                <%=post.author%>
+                            </b>
+                    </p>
+                    <%if(post.img){%>
+                        <img src="<%=post.img%>" alt="">
+                        <%}%>
+                </article>
+                <%}%>
+        </div>
+        <%- include('partials/footer'); %>

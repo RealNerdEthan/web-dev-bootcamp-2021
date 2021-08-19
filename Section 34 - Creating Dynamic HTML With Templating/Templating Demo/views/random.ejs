@@ -10,8 +10,19 @@
 
 <body>
     <h1>
-        Your random number is: <%= Math.floor(Math.random() * 10) + 1%>
+        Your random number is: <%=random%>
     </h1>
+    <!--This is an example of embedding conditional JS logic but NOT rendering it on the page becuase it's missing the = sign-->
+    <% if(random % 2===0){%>
+        <h2>That is an even number!</h2>
+        <%} else{%>
+            <h2>That is an odd number!</h2>
+            <%} %>
+
+                <!--Another way to do this, but we use embedding and it's inline with the HTML element-->
+                <h3>
+                    <%= random % 2===0 ? 'This is an even number!' : 'This is an odd number!' %>
+                </h3>
 </body>
 
 </html>

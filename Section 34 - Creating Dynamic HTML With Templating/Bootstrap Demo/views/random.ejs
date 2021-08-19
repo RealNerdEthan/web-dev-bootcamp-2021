@@ -1,0 +1,18 @@
+<%- include('partials/head'); %>
+
+    <%- include('partials/navbar'); %>
+        <h1>
+            Your random number is: <%=number%>
+        </h1>
+        <!--This is an example of embedding conditional JS logic but NOT rendering it on the page becuase it's missing the = sign-->
+        <% if(number % 2===0){%>
+            <h2>That is an even number!</h2>
+            <%} else{%>
+                <h2>That is an odd number!</h2>
+                <%} %>
+
+                    <!--Another way to do this, but we use embedding and it's inline with the HTML element-->
+                    <h3>
+                        <%= number % 2===0 ? 'This is an even number!' : 'This is an odd number!' %>
+                    </h3>
+                    <%- include('partials/footer'); %>

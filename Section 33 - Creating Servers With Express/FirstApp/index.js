@@ -63,3 +63,7 @@ app.get('*', function(request, response){
 app.listen(3000, function(){
     console.log('Listening on port 3000!')
 })
+
+//This is a test comment to show off nodemon, see below!
+
+//Pretty neat huh?:)
