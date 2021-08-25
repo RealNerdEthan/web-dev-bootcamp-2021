@@ -1,0 +1,39 @@
+Databases are CRUD applications.
+MongoDB documentation on CRUD functionality: https://docs.mongodb.com/manual/crud/
+
+help : shows the help menu
+exit : closes MongoDB
+db : Shows current database
+show dbs : shows all existing DBs that have data in them
+use db_name : moves you to a database and creates it if it doesn't already exist
+
+-Read-
+show collections : shows collections in current database
+
+-Create-
+db.collection.insert({}) : inserts data into collection and creates the collection if it doesn't already exist
+db.collection.find() : shows data inside a collection
+
+-Update-
+db.collection.updateOne({property: value}, {$set: {field: value}}) : updates 1 record (document)
+db-collection.updateMany({property: value}, {$set: {field: value}}) : updates many records (documents) at once
+
+-Delete-
+db-collection.deleteOne({property: value}) : deletes one record (document)
+db-collection.deleteMany({property: value}) : deletes many records (documents)
+db-collection.deleteMany({}) : this deletes all data in the collection
+
+
+-Additional Commands-
+db.collection.find({'property.nested_property' : value}) : find a nested object properety
+
+-Additional Operators (Query)-
+Link: https://docs.mongodb.com/manual/reference/operator/
+$eq : Matches values that are equal to a specified value
+$gt : Matches values that are greater than a specified value
+$gte : Matches values that are greater than or equal to a specified value
+$in : Matches any of the values specified in an array
+$lt : Matches values that are less than a specified value
+$lte : Matches values that are less than or equal to a specified value
+$ne : Matches all values that are not equal to a specified value
+$nin : Matches none of the values specified in an array
