@@ -1,0 +1,8 @@
+MongoDB: https://www.mongodb.com/
+Community Server Download: https://www.mongodb.com/try/download/community
+Install Instructions: https://zarkom.net/blogs/how-to-install-mongodb-for-development-in-windows-3328
+
+A new shell that I haven't installed yet called Mongosh:
+https://docs.mongodb.com/mongodb-shell/install/
+
+Note: There is a .bat file in the Web Dev Bootcamp main folder that starts our MongoDB.
