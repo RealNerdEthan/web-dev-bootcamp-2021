@@ -1,0 +1,9 @@
+-Steps To Setting Up A New Web App-
+
+-Create a folder in 'Github Repos' folder
+-Open BASH and navigate to that folder
+-npm install init
+-npm install any other packages you want/need (express, nodemon, UUID, method-override)
+-touch index.js (will have RESTful routes)
+-mkdir views (will store our .ejs html pages)
+-In VSCode, make any .ejs files you'll need to get started and put them in the 'views' folder
