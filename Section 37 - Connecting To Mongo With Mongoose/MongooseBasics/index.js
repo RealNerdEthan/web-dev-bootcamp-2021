@@ -1,3 +1,4 @@
+//Header -----------------------------------------------------------------
 const mongoose = require('mongoose');
 
 //Connect to the MongoDB
@@ -9,6 +10,8 @@ mongoose.connect('mongodb://localhost:27017/movieApp', {useNewUrlParser: true, u
         console.log("Encountered an error!");
         console.log(err);
     });
+// -----------------------------------------------------------------------
+
 
     //Schema is a mapping of different 'collection keys' from Mongo to differernt 'types' in JavaScript
     const movieSchema = new mongoose.Schema({
