@@ -24,17 +24,44 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+//Parse the body of the POST request for new campground
+app.use(express.urlencoded({extended: true}))
+
 //Home route
 app.get('/', function(request, response){
     response.render('home')
-})
+});
+
+//Campgrounds route
+app.get('/campgrounds', async function(request, response){
+    const campgrounds = await Campground.find({});
+    response.render('campgrounds/index', {campgrounds})
+});
 
 //Used to confirm we can input and see data from database
-app.get('/makeCampground', async function(request, response){
-    const camp = new Campground({title: 'My Backyard', description: 'Cheap camping!'});
-    await camp.save();
-    response.send(camp)
+// app.get('/makeCampground', async function(request, response){
+//     const camp = new Campground({title: 'My Backyard', description: 'Cheap camping!'});
+//     await camp.save();
+//     response.send(camp)
+// })
+
+//New campground route
+app.get('/campgrounds/new', function(request, response){
+    response.render('campgrounds/new');
 })
+
+//New campround POST where the form is submitted to
+app.post('/campgrounds', async function(request, response){
+    const campground = new Campground(request.body.campground);
+    await campground.save();
+    response.redirect(`/campgrounds/${campground._id}`)
+})
+
+//Show/Details route
+app.get('/campgrounds/:id', async function(request, response){
+    const campground = await Campground.findById(request.params.id);
+    response.render('campgrounds/show', {campground});
+});
 
 app.listen(3000, function(){
     console.log('Serving on port 3000...')
