@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
+const methodOverride = require('method-override');
 const Campground = require('./models/campground');
 
 //These options are no longer needed in v6 of Mongoose
@@ -25,7 +26,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 //Parse the body of the POST request for new campground
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}));
+
+//Use Method-Override
+app.use(methodOverride('_method'));
 
 //Home route
 app.get('/', function(request, response){
@@ -62,6 +66,24 @@ app.get('/campgrounds/:id', async function(request, response){
     const campground = await Campground.findById(request.params.id);
     response.render('campgrounds/show', {campground});
 });
+
+//Form route for editing campground
+app.get('/campgrounds/:id/edit', async function(request, response){
+    const campground = await Campground.findById(request.params.id);
+    response.render('campgrounds/edit', {campground});
+})
+
+app.put('/campgrounds/:id', async function(request, response){
+    const {id} = request.params;
+    const campground = await Campground.findByIdAndUpdate(id, {...request.body.campground});
+    response.redirect(`/campgrounds/${campground._id}`);
+})
+
+app.delete('/campgrounds/:id', async function(request, response){
+    const {id} = request.params;
+    await Campground.findByIdAndDelete(id);
+    response.redirect('/campgrounds');
+})
 
 app.listen(3000, function(){
     console.log('Serving on port 3000...')
